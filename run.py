@@ -6,14 +6,15 @@ class Game(object):
     def __init__(self):
         # config
         self.max_tps = 300.0
+        self.tps_delta = 0.0
+        self.width = 1280
+        self.height = 720
 
         # initialization
         pygame.init()
-        self.width = 1280
-        self.height = 720
         self.screen = pygame.display.set_mode((self.width, self.height))
         self.tps_clock = pygame.time.Clock()
-        self.tps_delta = 0.0
+        
 
         # player
         self.player = Rocket(self)
